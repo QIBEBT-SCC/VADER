@@ -15,8 +15,8 @@ from ramanbiolib.search import SpectraSimilaritySearch
 
 from gmmot import GW2
 
-def get_batch_gmm_stats(z, y_true, num_classes):
-    mask = torch.nn.functional.one_hot(y_true, num_classes=num_classes).float()
+def get_batch_gmm_stats(z, y_true, idx):
+    mask = torch.nn.functional.one_hot(y_true, num_classes=np.max(idx)+1).float()
     counts = mask.sum(dim=0)  # [num_classes]
     safe_counts = counts.unsqueeze(1) + 1e-9
     m_t = torch.matmul(mask.t(), z) / safe_counts
@@ -26,7 +26,6 @@ def get_batch_gmm_stats(z, y_true, num_classes):
     v_t = torch.clamp(v_t, min=1e-6) # 数值保护
     
     w_t = counts / counts.sum()
-
     active_mask = counts > 1 # 至少 2 个样本才算方差
     return m_t[active_mask], v_t[active_mask], w_t[active_mask], active_mask
 
@@ -173,7 +172,8 @@ class VaDE(nn.Module):
         z_expanded = z.unsqueeze(1)  # [batch_size, 1, latent_dim]
         means_expanded = F.softplus(self.c_mean[idx]).unsqueeze(0)  # [1, num_clusters, latent_dim]
         log_vars_expanded = self.c_log_var[idx].unsqueeze(0)  # [1, num_clusters, latent_dim]
-        pi_expanded = self.pi_[idx].view(1, -1, 1).expand(z.shape[0], -1, z.shape[1])  # [1, num_clusters, 1]
+        pi = self.pi_[idx]
+        pi_expanded = pi.view(1, -1, 1).expand(z.shape[0], -1, z.shape[1])  # [1, num_clusters, 1]
     
         gamma = torch.sum(
             torch.log(pi_expanded)                   # 混合权重项
@@ -444,83 +444,71 @@ class VaDE(nn.Module):
             recon_loss = zero.expand(x.size(0))
 
         # 2. GMM先验的KL散度       
-        gamma_t = gamma.unsqueeze(-1)  # [batch_size, num_clusters, 1]
         z_mean = z_mean.unsqueeze(1)  # [batch_size, 1, latent_dim]
         z_log_var = z_log_var.unsqueeze(1)  # [batch_size, 1, latent_dim]
         
         idx = self.activate_clusters
         gaussian_means = F.softplus(self.c_mean[idx]).unsqueeze(0)  # [1, n_clusters, latent_dim]
         gaussian_log_vars = self.c_log_var[idx].unsqueeze(0)  # [1, n_clusters, latent_dim]
-        
+        pi = self.pi_[idx].unsqueeze(0)  # [1, n_clusters]
+
         if lamb2 > 0:
             log2pi = torch.log(torch.tensor(2.0*math.pi, device=x.device, dtype=x.dtype))
             # kl_distance_matrix = torch.sum(
-            #     0.5 * gamma_t * (
+            #     0.5 * (
             #         self.latent_dim * log2pi + gaussian_log_vars +
             #         torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
-            #         (z_mean - gaussian_means).pow(2) / (torch.exp(gaussian_log_vars) + 1e-10)
+            #         (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 
+            #         (1 + z_log_var)
             #     ),
-            #     dim=-1
-            # ) * lamb2
+            #     dim=2
+            # ) 
             kl_distance_matrix = torch.sum(
                 0.5 * (
-                    self.latent_dim * log2pi + gaussian_log_vars +
+                    self.latent_dim * log2pi + 
                     torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
-                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 
-                    (1 + z_log_var)
+                    torch.exp(gaussian_log_vars) / (torch.exp(z_log_var) + 1e-10) +
+                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 1
                 ),
-                dim=(1,2)
-            ) * lamb2 / gamma.shape[0]
-            # OT Loss
-            z = self.reparameterize(z_mean[:,0,:], z_log_var[:,0,:])
-            gamma = self.cal_gaussian_gamma(z)
-            with torch.no_grad():
-                m_t, C_t, w_t, active_mask = get_batch_gmm_stats(z, y.long(), 30)
-            m_s = gaussian_means[0,active_mask,:]
-            C_s = torch.diag_embed(torch.exp(gaussian_log_vars[0,active_mask,:])+1e-4)
-            w_s = self.pi_[idx][active_mask]
-            w_s = w_s / w_s.sum()
-            GW_loss = GW2(w_s,w_t.detach().double(), m_s,m_t.detach().double(), C_s, C_t.detach().double())
-            kl_gmm = GW_loss*100 + kl_distance_matrix
-           
-            # if self.prior_y is not None:
-            #     y_true = torch.tensor(np.array([self.label_map[int(label)] for label in y.cpu().numpy()], dtype=np.int64), device=self.device).long()
-            #     chosen_kl = kl_distance_matrix.gather(1, y_true.unsqueeze(1)).squeeze()
-            #     log_pi_chosen = torch.log(self.pi_[y_true] + 1e-10)
-            #     kl_gmm = chosen_kl - log_pi_chosen
+                dim=2
+            ) 
+            kl_gmm = torch.sum(gamma * kl_distance_matrix, dim=1) * lamb2
         else:
             kl_gmm = zero.expand(z_mean.size(0))
 
-        # 3. VAE的正则化
-        if lamb3 > 0 and self.prior_y is None:
-            kl_VAE = (-0.5 * torch.sum(1 + z_log_var, dim=2))* lamb3  # - z_mean.pow(2) - torch.exp(z_log_var)
-        else:
-            kl_VAE = zero.expand(gamma.size(0))
-
-        # 4. GMM熵项
-        if lamb4 > 0 and self.prior_y is None:
-            pi = self.pi_[idx].unsqueeze(0)  # [1, n_clusters]
-            entropy = lamb4 * (
+        # Gaussian的熵loss
+        if lamb3 > 0:
+            entropy = lamb3 * (
                 -torch.sum(torch.log(pi + 1e-10) * gamma, dim=-1) +
                 torch.sum(torch.log(gamma + 1e-10) * gamma, dim=-1)
             )
         else:
             entropy = zero.expand(gamma.size(0))
-
-        # 5. 峰加权损失，替换Recon_Loss
-        # if lamb5 > 0:
-        #     spectral_constraints = lamb5 * self.compute_spectral_constraints(x, recon_x).sum(-1) * self.input_dim
-        # else:
-        #     spectral_constraints = zero.expand(recon_x.size(0))
-
-        # 5.1. DESC KL Loss
-        # weight = gamma ** 2 / gamma.sum(0)
-        # p = (weight.T / weight.sum(1)).T
-        # sum_p_norm = torch.sum(p, dim=1, keepdim=True) # sum_k (N, 1)
         
-        # # P_ij
-        # p_norm = p / sum_p_norm
+        # Prior_y的对分布带监督的Loss
+        if lamb4 > 0 and self.prior_y is not None:
+            ## 1. M2 Loss
+            ## M2 loss只计算某个点对其先验中心的距离,向其靠近,所以不需要 log(gamma)*gamma的loss
+            entropy = zero.expand(gamma.size(0))
+            y_true = torch.tensor(np.array([self.label_map[int(label)] for label in y.cpu().numpy()], dtype=np.int64), device=self.device).long()
+            chosen_kl = kl_distance_matrix.gather(1, y_true.unsqueeze(1)).squeeze()
+            log_pi_chosen = torch.log(self.pi_[y_true] + 1e-10)
+            prior_loss = (chosen_kl - log_pi_chosen).mean() * lamb4
+            kl_gmm = zero.expand(z_mean.size(0)) # 不需要kl_loss了,因为计算到prior_loss中了
         
+            ## 2.OT Loss
+            # z = self.reparameterize(z_mean[:,0,:], z_log_var[:,0,:])
+            # gamma = self.cal_gaussian_gamma(z)
+            # with torch.no_grad():
+            #     m_t, C_t, w_t, active_mask = get_batch_gmm_stats(z, y.long(), idx.detach().cpu().numpy())
+            # m_s = gaussian_means[0,idx,:][active_mask,:]
+            # C_s = torch.diag_embed(torch.exp(gaussian_log_vars[0,idx,:][active_mask,:])+1e-4)
+            # w_s = self.pi_[idx][active_mask]
+            # w_s = w_s / w_s.sum()
+            # prior_loss = GW2(w_s,w_t.detach().double(), m_s,m_t.detach().double(), C_s, C_t.detach().double()) * lamb4
+        else:
+            prior_loss = 0
+
         # # 计算p和gamma(q)之间的KL散度
         if lamb5 > 0:
             spectral_constraints = torch.sum(P * torch.log(P / (gamma_desc + 1e-10) + 1e-10), dim=1) * lamb5
@@ -546,15 +534,15 @@ class VaDE(nn.Module):
             unsimilarity_S = zero.expand(S.size(0))
 
         # 总损失
-        loss = recon_loss.mean() + kl_VAE.mean() + kl_gmm.mean() +  entropy.mean()  + match_loss_bioDB.mean() + spectral_constraints.mean() + unsimilarity_S.mean()
+        loss = recon_loss.mean() + kl_gmm.mean() + entropy.mean() + prior_loss + match_loss_bioDB.mean() + spectral_constraints.mean() + unsimilarity_S.mean()
         
         # 返回损失字典
         loss_dict = {
             'total_loss': loss,
             'recon_loss': recon_loss.mean().item(),
             'kl_gmm': kl_gmm.mean().item(),
-            'kl_VAE': kl_VAE.mean().item(),
             'entropy': entropy.mean().item(),
+            'prior_loss': prior_loss.item(),
             'weighted_spectral': spectral_constraints.mean().item(),
             'match_loss': match_loss_bioDB.mean().item(),
             'unsimilarity_loss': unsimilarity_S.mean().item()

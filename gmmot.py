@@ -65,6 +65,10 @@ def GaussianW2(mu0, mu1, S0, S1):
     mu: [d]
     S:  [d, d] 或 [d] (如果是对角阵)
     """
+    # Sigma00  = spl.sqrtm(S0)
+    # Sigma010 = spl.sqrtm(Sigma00@S1@Sigma00)
+    # d        = np.linalg.norm(mu0-mu1)**2+np.trace(S0+S1-2*Sigma010)
+    # return d
     dist_mu = torch.sum((mu0 - mu1)**2)
     
     if S0.dim() == 1:
