@@ -454,24 +454,24 @@ class VaDE(nn.Module):
 
         if lamb2 > 0:
             log2pi = torch.log(torch.tensor(2.0*math.pi, device=x.device, dtype=x.dtype))
-            kl_distance_matrix = torch.sum(
-                0.5 * (
-                    self.latent_dim * log2pi + gaussian_log_vars +
-                    torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
-                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 
-                    (1 + z_log_var)
-                ),
-                dim=2
-            ) 
             # kl_distance_matrix = torch.sum(
             #     0.5 * (
-            #         self.latent_dim * log2pi + 
+            #         self.latent_dim * log2pi + gaussian_log_vars +
             #         torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
-            #         torch.exp(gaussian_log_vars) / (torch.exp(z_log_var) + 1e-10) +
-            #         (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 1
+            #         (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 
+            #         (1 + z_log_var)
             #     ),
             #     dim=2
             # ) 
+            kl_distance_matrix = torch.sum(
+                0.5 * (
+                    self.latent_dim * log2pi + 
+                    torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
+                    torch.exp(gaussian_log_vars) / (torch.exp(z_log_var) + 1e-10) +
+                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 1
+                ),
+                dim=2
+            ) 
             kl_gmm = torch.sum(gamma * kl_distance_matrix, dim=1) * lamb2
         else:
             kl_gmm = zero.expand(z_mean.size(0))
@@ -489,14 +489,14 @@ class VaDE(nn.Module):
         if lamb4 > 0 and self.prior_y is not None:
             ## 1. M2 Loss
             ## M2 loss只计算某个点对其先验中心的距离,向其靠近,所以不需要 log(gamma)*gamma的loss
-            # entropy = zero.expand(gamma.size(0))
-            # y_true = torch.tensor(np.array([self.label_map[int(label)] for label in y.cpu().numpy()], dtype=np.int64), device=self.device).long()
-            # chosen_kl = kl_distance_matrix.gather(1, y_true.unsqueeze(1)).squeeze()
-            # log_pi_chosen = torch.log(self.pi_[y_true] + 1e-10)
-            # prior_loss = (chosen_kl - log_pi_chosen).mean() * lamb4
-            # kl_gmm = zero.expand(z_mean.size(0)) # 不需要kl_loss了,因为计算到prior_loss中了
-            y_true = torch.tensor(np.array([self.label_map[int(label)] for label in y.cpu().numpy()], dtype=np.int64), device=self.device).long() 
-            prior_loss = F.cross_entropy(gamma, y_true) * lamb4
+            entropy = zero.expand(gamma.size(0))
+            y_true = torch.tensor(np.array([self.label_map[int(label)] for label in y.cpu().numpy()], dtype=np.int64), device=self.device).long()
+            chosen_kl = kl_distance_matrix.gather(1, y_true.unsqueeze(1)).squeeze()
+            log_pi_chosen = torch.log(self.pi_[y_true] + 1e-10)
+            prior_loss = (chosen_kl - log_pi_chosen).mean() * lamb4
+            kl_gmm = zero.expand(z_mean.size(0)) # 不需要kl_loss了,因为计算到prior_loss中了
+            # y_true = torch.tensor(np.array([self.label_map[int(label)] for label in y.cpu().numpy()], dtype=np.int64), device=self.device).long() 
+            # prior_loss = F.cross_entropy(gamma, y_true) * lamb4
         
             ## 2.OT Loss
             # z = self.reparameterize(z_mean[:,0,:], z_log_var[:,0,:])
