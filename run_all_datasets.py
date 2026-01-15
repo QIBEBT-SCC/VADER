@@ -45,6 +45,7 @@ except IndexError:
 def train_on_dataset(
     train_data, train_label, S, Wavenumber, device, project_tag, Pretrain_epochs, epochs, batch_size, memo="test"):
     set_random_seed(123)
+    snapshot_sources(os.path.join(project_tag,memo))
 
     model_params = config.get_model_params()
     device = set_device(device)
@@ -114,7 +115,7 @@ async def run_all_datasets_async(datasets):
 
 def main():
     project_tag = 'Test_MCREC/0107_cVADER_Instrument_test'
-    snapshot_sources(project_tag)
+    
     datasets = [
         # {
         #     'train_data': np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Algae/Algae_process.npy"),
