@@ -175,7 +175,7 @@ def main():
             'Pretrain_epochs': 100,
             'epochs':   2000,
             'batch_size':   128,
-            "memo": "Change_gmm_rep"
+            "memo": "Add_CrossEntropy"
         },
         # {
         #     "train_data":  np.flip(np.vstack((np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_9/X_finetune.npy"),

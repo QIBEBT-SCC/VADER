@@ -49,7 +49,7 @@ weight_scheduler:
     lamb1: 100  # 重构损失
     lamb2: 1    # GMM先验的KL散度  
     lamb3: 1    # GMM熵项
-    lamb4: 1  # 先验损失, M2-1, OT-10,100
+    lamb4: 100  # 先验损失, M2-1, OT-10,100
     lamb5: 0    # 峰加权损失，替换Recon_Loss
     lamb6: 1000 # Match Loss of S
     lamb7: 0    # Unsimilarity between S
@@ -57,7 +57,7 @@ weight_scheduler:
     lamb1: 100  # 重构损失
     lamb2: 1    # GMM先验的KL散度  
     lamb3: 1    # GMM熵项
-    lamb4: 1  # 先验损失, M2-1, OT-10,100
+    lamb4: 100  # 先验损失, M2-1, OT-10,100
     lamb5: 0    # 峰加权损失，替换Recon_Loss
     lamb6: 1000 # Match Loss of S
     lamb7: 0    # Unsimilarity between S
