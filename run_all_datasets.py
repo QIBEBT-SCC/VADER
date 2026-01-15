@@ -66,7 +66,7 @@ def train_on_dataset(
         n_components=n_component,
         S=torch.tensor(S).float().to(device),
         wavenumber = Wavenumber,
-        # prior_y=train_label,
+        prior_y=train_label,
         device=device,
         l_c_dim=l_c_dim,
         encoder_type=model_params['encoder_type'],
