@@ -65,7 +65,7 @@ def train_on_dataset(
         n_components=n_component,
         S=torch.tensor(S).float().to(device),
         wavenumber = Wavenumber,
-        prior_y=train_label,
+        # prior_y=train_label,
         device=device,
         l_c_dim=l_c_dim,
         encoder_type=model_params['encoder_type'],
@@ -245,10 +245,10 @@ def main():
             "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Wavenumber.npy'),
             "device": "cuda:3",
             "project_tag": project_tag,
-            'Pretrain_epochs': 1,
+            'Pretrain_epochs': 100,
             'epochs':   1000,
             'batch_size':   128,
-            "memo": "Horiba_Change_Gmm"
+            "memo": "Horiba_Unsupervised"
         },
         {
             "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/X_WITEC.npy"),
@@ -257,10 +257,10 @@ def main():
             "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Wavenumber.npy'),
             "device": "cuda:3",
             "project_tag": project_tag,
-            'Pretrain_epochs': 1,
+            'Pretrain_epochs': 100,
             'epochs':   1000,
             'batch_size':   128,
-            "memo": "WITEC_Change_Gmm"
+            "memo": "WITEC_Unsupervised"
         },
         {
             "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/X_Two.npy"),
@@ -269,10 +269,10 @@ def main():
             "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Wavenumber.npy'),
             "device": "cuda:3",
             "project_tag": project_tag,
-            'Pretrain_epochs': 1,
+            'Pretrain_epochs': 100,
             'epochs':   1000,
             'batch_size':   128,
-            "memo": "Two_Change_Gmm"
+            "memo": "Two_Unsupervised"
         },
         ## ATCC Datasets
         # {

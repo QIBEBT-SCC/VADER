@@ -454,24 +454,24 @@ class VaDE(nn.Module):
 
         if lamb2 > 0:
             log2pi = torch.log(torch.tensor(2.0*math.pi, device=x.device, dtype=x.dtype))
-            # kl_distance_matrix = torch.sum(
-            #     0.5 * (
-            #         self.latent_dim * log2pi + gaussian_log_vars +
-            #         torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
-            #         (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 
-            #         (1 + z_log_var)
-            #     ),
-            #     dim=2
-            # ) 
             kl_distance_matrix = torch.sum(
                 0.5 * (
-                    self.latent_dim * log2pi + 
+                    self.latent_dim * log2pi + gaussian_log_vars +
                     torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
-                    torch.exp(gaussian_log_vars) / (torch.exp(z_log_var) + 1e-10) +
-                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 1
+                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 
+                    (1 + z_log_var)
                 ),
                 dim=2
             ) 
+            # kl_distance_matrix = torch.sum(
+            #     0.5 * (
+            #         self.latent_dim * log2pi + 
+            #         torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
+            #         torch.exp(gaussian_log_vars) / (torch.exp(z_log_var) + 1e-10) +
+            #         (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 1
+            #     ),
+            #     dim=2
+            # ) 
             kl_gmm = torch.sum(gamma * kl_distance_matrix, dim=1) * lamb2
         else:
             kl_gmm = zero.expand(z_mean.size(0))
@@ -507,7 +507,7 @@ class VaDE(nn.Module):
             # w_s = w_s / w_s.sum()
             # prior_loss = GW2(w_s,w_t.detach().double(), m_s,m_t.detach().double(), C_s, C_t.detach().double()) * lamb4
         else:
-            prior_loss = 0
+            prior_loss = zero.expand(z_mean.size(0)).mean()
 
         # # 计算p和gamma(q)之间的KL散度
         if lamb5 > 0:
