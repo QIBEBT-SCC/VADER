@@ -468,7 +468,7 @@ class VaDE(nn.Module):
                     self.latent_dim * log2pi + 
                     torch.exp(z_log_var) / (torch.exp(gaussian_log_vars) + 1e-10) +
                     torch.exp(gaussian_log_vars) / (torch.exp(z_log_var) + 1e-10) +
-                    (z_mean - gaussian_means) .pow(2) / (torch.exp(gaussian_log_vars) + 1e-10) - 1
+                    (z_mean - gaussian_means) .pow(2) / (torch.exp(z_log_var) + 1e-10) - 1
                 ),
                 dim=2
             ) 
