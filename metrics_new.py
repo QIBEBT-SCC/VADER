@@ -104,7 +104,7 @@ class ModelEvaluator:
             }
 
             # 解包训练指标
-            train_metrics_names = ['total_loss', 'recon_loss', 'kl_gmm', 'kl_VAE', 'entropy', 'weighted_spectral', 'match_loss', 'unsimilarity_loss']
+            train_metrics_names = ['total_loss', 'recon_loss', 'kl_gmm', 'entropy', 'prior_loss', 'weighted_spectral', 'match_loss', 'unsimilarity_loss']
             train_metrics_dict = {name: train_metrics[name] for name in train_metrics_names}
 
             # 合并所有指标
@@ -168,8 +168,8 @@ class ModelEvaluator:
             ('Total Loss', metrics.get('total_loss', 0.0), '.2f'),
             ('Recon Loss', metrics.get('recon_loss', 0.0), '.2f'),
             ('KL GMM', metrics.get('kl_gmm', 0.0), '.2f'),
-            ('KL VAE', metrics.get('kl_VAE', 0.0), '.2f'),
             ('Entropy', metrics.get('entropy', 0.0), '.2f'),
+            ('Prior_Loss', metrics.get('prior_loss', 0.0), '.2f'),
             ('Weiggted Spectral', metrics.get('weighted_spectral', 0.0), '.2f'),
             ('Match Loss', metrics.get('match_loss', 0.0), 'f'),
             ('Unsimilarity Loss', metrics.get('unsimilarity_loss', 0.0), '.2f')

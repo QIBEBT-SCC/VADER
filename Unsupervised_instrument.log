@@ -1,0 +1,686 @@
+nohup: ignoring input
+2026-01-20 17:37:32.056519: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-20 17:37:43.377502: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-20 17:37:43.487131: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-01-20 17:37:43.629338: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+成功复制配置文件到: /mnt/sda/gene/zhangym/VADER/VADER/Test_MCREC/0107_cVADER_Instrument/WITEC_Unsupervise
+
+Clustering method: leiden
+使用学习率调度器
+
+Epoch [1/1000]
+LR: 0.0001, Total Loss: 2872.09, Recon Loss: 2348.05, KL GMM: 440.64, Entropy: 1.71, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 81.698400, Unsimilarity Loss: 0.00
+GMM ACC: 0.3201, GMM NMI: 0.2523, GMM ARI: 0.1623
+Z_Leiden ACC: 0.3381, Z_Leiden NMI: 0.2695, Z_Leiden ARI: 0.1786
+
+Epoch [2/1000]
+LR: 0.0001, Total Loss: 1941.50, Recon Loss: 1420.52, KL GMM: 437.96, Entropy: 1.51, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 81.519722, Unsimilarity Loss: 0.00
+GMM ACC: 0.3231, GMM NMI: 0.2565, GMM ARI: 0.1627
+Z_Leiden ACC: 0.3363, Z_Leiden NMI: 0.2653, Z_Leiden ARI: 0.1736
+
+Epoch [3/1000]
+LR: 0.0001, Total Loss: 1913.85, Recon Loss: 1393.93, KL GMM: 437.48, Entropy: 1.36, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 81.078136, Unsimilarity Loss: 0.00
+GMM ACC: 0.3218, GMM NMI: 0.2547, GMM ARI: 0.1602
+Z_Leiden ACC: 0.3607, Z_Leiden NMI: 0.2686, Z_Leiden ARI: 0.1886
+
+Epoch [4/1000]
+LR: 0.0001, Total Loss: 1893.00, Recon Loss: 1374.32, KL GMM: 436.86, Entropy: 1.23, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 80.579867, Unsimilarity Loss: 0.00
+GMM ACC: 0.3242, GMM NMI: 0.2568, GMM ARI: 0.1617
+Z_Leiden ACC: 0.3436, Z_Leiden NMI: 0.2562, Z_Leiden ARI: 0.1724
+
+Epoch [5/1000]
+LR: 0.0001, Total Loss: 1876.47, Recon Loss: 1358.33, KL GMM: 437.03, Entropy: 1.13, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 79.982353, Unsimilarity Loss: 0.00
+GMM ACC: 0.3286, GMM NMI: 0.2593, GMM ARI: 0.1639
+Z_Leiden ACC: 0.3072, Z_Leiden NMI: 0.2827, Z_Leiden ARI: 0.1597
+
+Epoch [6/1000]
+LR: 0.0001, Total Loss: 1862.80, Recon Loss: 1345.95, KL GMM: 436.46, Entropy: 1.04, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 79.357771, Unsimilarity Loss: 0.00
+GMM ACC: 0.3248, GMM NMI: 0.2580, GMM ARI: 0.1606
+Z_Leiden ACC: 0.3022, Z_Leiden NMI: 0.2735, Z_Leiden ARI: 0.1627
+
+Epoch [7/1000]
+LR: 0.0001, Total Loss: 1851.46, Recon Loss: 1335.42, KL GMM: 436.42, Entropy: 0.96, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 78.662833, Unsimilarity Loss: 0.00
+GMM ACC: 0.3238, GMM NMI: 0.2593, GMM ARI: 0.1620
+Z_Leiden ACC: 0.3546, Z_Leiden NMI: 0.3036, Z_Leiden ARI: 0.1981
+
+Epoch [8/1000]
+LR: 0.0001, Total Loss: 1838.44, Recon Loss: 1323.09, KL GMM: 436.55, Entropy: 0.89, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 77.909477, Unsimilarity Loss: 0.00
+GMM ACC: 0.3238, GMM NMI: 0.2615, GMM ARI: 0.1623
+Z_Leiden ACC: 0.3753, Z_Leiden NMI: 0.3006, Z_Leiden ARI: 0.1905
+
+Epoch [9/1000]
+LR: 0.0001, Total Loss: 1834.04, Recon Loss: 1319.97, KL GMM: 436.11, Entropy: 0.82, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 77.140422, Unsimilarity Loss: 0.00
+GMM ACC: 0.3266, GMM NMI: 0.2640, GMM ARI: 0.1663
+Z_Leiden ACC: 0.3558, Z_Leiden NMI: 0.3011, Z_Leiden ARI: 0.1975
+
+Epoch [10/1000]
+LR: 0.0001, Total Loss: 1814.74, Recon Loss: 1301.15, KL GMM: 436.47, Entropy: 0.76, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 76.363868, Unsimilarity Loss: 0.00
+GMM ACC: 0.3253, GMM NMI: 0.2649, GMM ARI: 0.1650
+Z_Leiden ACC: 0.3814, Z_Leiden NMI: 0.2979, Z_Leiden ARI: 0.2227
+
+Epoch [11/1000]
+LR: 0.0001, Total Loss: 1799.31, Recon Loss: 1287.45, KL GMM: 435.60, Entropy: 0.71, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 75.542821, Unsimilarity Loss: 0.00
+GMM ACC: 0.3248, GMM NMI: 0.2664, GMM ARI: 0.1656
+Z_Leiden ACC: 0.3161, Z_Leiden NMI: 0.2951, Z_Leiden ARI: 0.1881
+
+Epoch [12/1000]
+LR: 0.0001, Total Loss: 1787.00, Recon Loss: 1275.41, KL GMM: 436.19, Entropy: 0.66, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 74.743165, Unsimilarity Loss: 0.00
+GMM ACC: 0.3253, GMM NMI: 0.2653, GMM ARI: 0.1668
+Z_Leiden ACC: 0.3710, Z_Leiden NMI: 0.3073, Z_Leiden ARI: 0.2341
+
+Epoch [13/1000]
+LR: 0.0001, Total Loss: 1776.71, Recon Loss: 1266.77, KL GMM: 435.40, Entropy: 0.61, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 73.922474, Unsimilarity Loss: 0.00
+GMM ACC: 0.3265, GMM NMI: 0.2681, GMM ARI: 0.1694
+Z_Leiden ACC: 0.3543, Z_Leiden NMI: 0.3091, Z_Leiden ARI: 0.1975
+
+Epoch [14/1000]
+LR: 0.0001, Total Loss: 1770.02, Recon Loss: 1260.79, KL GMM: 435.56, Entropy: 0.57, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 73.108771, Unsimilarity Loss: 0.00
+GMM ACC: 0.3255, GMM NMI: 0.2658, GMM ARI: 0.1673
+Z_Leiden ACC: 0.3856, Z_Leiden NMI: 0.3010, Z_Leiden ARI: 0.2183
+
+Epoch [15/1000]
+LR: 0.0001, Total Loss: 1752.79, Recon Loss: 1244.90, KL GMM: 435.08, Entropy: 0.53, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 72.284842, Unsimilarity Loss: 0.00
+GMM ACC: 0.3211, GMM NMI: 0.2678, GMM ARI: 0.1686
+Z_Leiden ACC: 0.3819, Z_Leiden NMI: 0.3118, Z_Leiden ARI: 0.2103
+
+Epoch [16/1000]
+LR: 0.0001, Total Loss: 1753.10, Recon Loss: 1246.56, KL GMM: 434.54, Entropy: 0.49, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 71.511171, Unsimilarity Loss: 0.00
+GMM ACC: 0.3215, GMM NMI: 0.2681, GMM ARI: 0.1690
+Z_Leiden ACC: 0.4148, Z_Leiden NMI: 0.3048, Z_Leiden ARI: 0.2307
+
+Epoch [17/1000]
+LR: 0.0001, Total Loss: 1727.01, Recon Loss: 1221.27, KL GMM: 434.57, Entropy: 0.45, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 70.728405, Unsimilarity Loss: 0.00
+GMM ACC: 0.3217, GMM NMI: 0.2705, GMM ARI: 0.1725
+Z_Leiden ACC: 0.3944, Z_Leiden NMI: 0.3114, Z_Leiden ARI: 0.2305
+
+Epoch [18/1000]
+LR: 0.0001, Total Loss: 1719.54, Recon Loss: 1214.66, KL GMM: 434.57, Entropy: 0.42, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 69.891427, Unsimilarity Loss: 0.00
+GMM ACC: 0.3187, GMM NMI: 0.2707, GMM ARI: 0.1731
+Z_Leiden ACC: 0.3526, Z_Leiden NMI: 0.3161, Z_Leiden ARI: 0.2008
+
+Epoch [19/1000]
+LR: 0.0001, Total Loss: 1713.73, Recon Loss: 1209.90, KL GMM: 434.36, Entropy: 0.38, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 69.089069, Unsimilarity Loss: 0.00
+GMM ACC: 0.3195, GMM NMI: 0.2717, GMM ARI: 0.1734
+Z_Leiden ACC: 0.3738, Z_Leiden NMI: 0.3182, Z_Leiden ARI: 0.2194
+
+Epoch [20/1000]
+LR: 0.0001, Total Loss: 1700.90, Recon Loss: 1198.29, KL GMM: 433.96, Entropy: 0.35, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 68.298854, Unsimilarity Loss: 0.00
+GMM ACC: 0.3144, GMM NMI: 0.2709, GMM ARI: 0.1723
+Z_Leiden ACC: 0.3666, Z_Leiden NMI: 0.3117, Z_Leiden ARI: 0.2120
+
+Epoch [21/1000]
+LR: 0.0001, Total Loss: 1689.13, Recon Loss: 1187.55, KL GMM: 433.72, Entropy: 0.32, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 67.545771, Unsimilarity Loss: 0.00
+GMM ACC: 0.3131, GMM NMI: 0.2721, GMM ARI: 0.1731
+Z_Leiden ACC: 0.3607, Z_Leiden NMI: 0.3052, Z_Leiden ARI: 0.2078
+
+Epoch [22/1000]
+LR: 0.0001, Total Loss: 1695.81, Recon Loss: 1197.35, KL GMM: 433.09, Entropy: 0.29, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 65.077210, Unsimilarity Loss: 0.00
+GMM ACC: 0.3144, GMM NMI: 0.2729, GMM ARI: 0.1734
+Z_Leiden ACC: 0.3375, Z_Leiden NMI: 0.3170, Z_Leiden ARI: 0.2042
+
+Epoch [23/1000]
+LR: 0.0001, Total Loss: 1671.79, Recon Loss: 1173.96, KL GMM: 433.16, Entropy: 0.26, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 64.409004, Unsimilarity Loss: 0.00
+GMM ACC: 0.3117, GMM NMI: 0.2732, GMM ARI: 0.1745
+Z_Leiden ACC: 0.3619, Z_Leiden NMI: 0.3212, Z_Leiden ARI: 0.2070
+
+Epoch [24/1000]
+LR: 0.0001, Total Loss: 1663.24, Recon Loss: 1166.02, KL GMM: 433.18, Entropy: 0.24, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 63.809259, Unsimilarity Loss: 0.00
+GMM ACC: 0.3157, GMM NMI: 0.2749, GMM ARI: 0.1768
+Z_Leiden ACC: 0.3472, Z_Leiden NMI: 0.3239, Z_Leiden ARI: 0.2091
+
+Epoch [25/1000]
+LR: 0.0001, Total Loss: 1652.28, Recon Loss: 1156.26, KL GMM: 432.63, Entropy: 0.21, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 63.179235, Unsimilarity Loss: 0.00
+GMM ACC: 0.3130, GMM NMI: 0.2770, GMM ARI: 0.1778
+Z_Leiden ACC: 0.3551, Z_Leiden NMI: 0.3166, Z_Leiden ARI: 0.2029
+
+Epoch [26/1000]
+LR: 0.0001, Total Loss: 1649.36, Recon Loss: 1153.80, KL GMM: 432.72, Entropy: 0.19, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 62.646412, Unsimilarity Loss: 0.00
+GMM ACC: 0.3150, GMM NMI: 0.2778, GMM ARI: 0.1771
+Z_Leiden ACC: 0.4032, Z_Leiden NMI: 0.3251, Z_Leiden ARI: 0.2455
+
+Epoch [27/1000]
+LR: 0.0001, Total Loss: 1631.62, Recon Loss: 1137.31, KL GMM: 431.96, Entropy: 0.17, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 62.180728, Unsimilarity Loss: 0.00成功复制配置文件到: /mnt/sda/gene/zhangym/VADER/VADER/Test_MCREC/0107_cVADER_Instrument/Horiba_Unsupervise
+
+Clustering method: leiden
+使用学习率调度器
+
+Epoch [1/1000]
+LR: 0.0001, Total Loss: 3268.71, Recon Loss: 2680.83, KL GMM: 483.44, Entropy: 1.54, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 102.900422, Unsimilarity Loss: 0.00
+GMM ACC: 0.3114, GMM NMI: 0.1849, GMM ARI: 0.1169
+Z_Leiden ACC: 0.2871, Z_Leiden NMI: 0.2668, Z_Leiden ARI: 0.1541
+
+Epoch [2/1000]
+LR: 0.0001, Total Loss: 1498.82, Recon Loss: 959.82, KL GMM: 441.54, Entropy: 1.16, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 96.302425, Unsimilarity Loss: 0.00
+GMM ACC: 0.3108, GMM NMI: 0.1861, GMM ARI: 0.1167
+Z_Leiden ACC: 0.3235, Z_Leiden NMI: 0.2627, Z_Leiden ARI: 0.1572
+
+Epoch [3/1000]
+LR: 0.0001, Total Loss: 1457.11, Recon Loss: 924.82, KL GMM: 439.84, Entropy: 0.92, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 91.516220, Unsimilarity Loss: 0.00
+GMM ACC: 0.3113, GMM NMI: 0.1856, GMM ARI: 0.1161
+Z_Leiden ACC: 0.3138, Z_Leiden NMI: 0.2579, Z_Leiden ARI: 0.1515
+
+Epoch [4/1000]
+LR: 0.0001, Total Loss: 1433.70, Recon Loss: 907.35, KL GMM: 437.73, Entropy: 0.75, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 87.865706, Unsimilarity Loss: 0.00
+GMM ACC: 0.3122, GMM NMI: 0.1864, GMM ARI: 0.1181
+Z_Leiden ACC: 0.3185, Z_Leiden NMI: 0.2489, Z_Leiden ARI: 0.1530
+
+Epoch [5/1000]
+LR: 0.0001, Total Loss: 1413.41, Recon Loss: 891.73, KL GMM: 436.06, Entropy: 0.61, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 85.013874, Unsimilarity Loss: 0.00
+GMM ACC: 0.3141, GMM NMI: 0.1886, GMM ARI: 0.1198
+Z_Leiden ACC: 0.3111, Z_Leiden NMI: 0.2764, Z_Leiden ARI: 0.1598
+
+Epoch [6/1000]
+LR: 0.0001, Total Loss: 1402.03, Recon Loss: 883.71, KL GMM: 435.28, Entropy: 0.49, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 82.538781, Unsimilarity Loss: 0.00
+GMM ACC: 0.3133, GMM NMI: 0.1876, GMM ARI: 0.1185
+Z_Leiden ACC: 0.2970, Z_Leiden NMI: 0.2688, Z_Leiden ARI: 0.1520
+
+Epoch [7/1000]
+LR: 0.0001, Total Loss: 1389.41, Recon Loss: 875.32, KL GMM: 433.50, Entropy: 0.39, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 80.202870, Unsimilarity Loss: 0.00
+GMM ACC: 0.3153, GMM NMI: 0.1876, GMM ARI: 0.1189
+Z_Leiden ACC: 0.3246, Z_Leiden NMI: 0.2845, Z_Leiden ARI: 0.1735
+
+Epoch [8/1000]
+LR: 0.0001, Total Loss: 1375.96, Recon Loss: 866.42, KL GMM: 431.24, Entropy: 0.30, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 78.001835, Unsimilarity Loss: 0.00
+GMM ACC: 0.3178, GMM NMI: 0.1892, GMM ARI: 0.1193
+Z_Leiden ACC: 0.2654, Z_Leiden NMI: 0.2355, Z_Leiden ARI: 0.1310
+
+Epoch [9/1000]
+LR: 0.0001, Total Loss: 1363.95, Recon Loss: 859.14, KL GMM: 428.80, Entropy: 0.22, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 75.791004, Unsimilarity Loss: 0.00
+GMM ACC: 0.3183, GMM NMI: 0.1888, GMM ARI: 0.1178
+Z_Leiden ACC: 0.2958, Z_Leiden NMI: 0.2184, Z_Leiden ARI: 0.1311
+
+Epoch [10/1000]
+LR: 0.0001, Total Loss: 1353.76, Recon Loss: 853.02, KL GMM: 427.15, Entropy: 0.15, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 73.441134, Unsimilarity Loss: 0.00
+GMM ACC: 0.3184, GMM NMI: 0.1875, GMM ARI: 0.1172
+Z_Leiden ACC: 0.3397, Z_Leiden NMI: 0.2267, Z_Leiden ARI: 0.1564
+
+Epoch [11/1000]
+LR: 0.0001, Total Loss: 1344.31, Recon Loss: 847.18, KL GMM: 425.81, Entropy: 0.08, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 71.238198, Unsimilarity Loss: 0.00
+GMM ACC: 0.3219, GMM NMI: 0.1880, GMM ARI: 0.1150
+Z_Leiden ACC: 0.3089, Z_Leiden NMI: 0.2018, Z_Leiden ARI: 0.1320
+
+Epoch [12/1000]
+LR: 0.0001, Total Loss: 1351.15, Recon Loss: 856.56, KL GMM: 425.63, Entropy: 0.02, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 68.942908, Unsimilarity Loss: 0.00
+GMM ACC: 0.3234, GMM NMI: 0.1878, GMM ARI: 0.1143
+Z_Leiden ACC: 0.2757, Z_Leiden NMI: 0.1816, Z_Leiden ARI: 0.1197
+
+Epoch [13/1000]
+LR: 0.0001, Total Loss: 1337.62, Recon Loss: 845.62, KL GMM: 425.16, Entropy: -0.04, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 66.870741, Unsimilarity Loss: 0.00
+GMM ACC: 0.3226, GMM NMI: 0.1881, GMM ARI: 0.1101
+Z_Leiden ACC: 0.3020, Z_Leiden NMI: 0.1853, Z_Leiden ARI: 0.1331
+
+Epoch [14/1000]
+LR: 0.0001, Total Loss: 1328.32, Recon Loss: 838.75, KL GMM: 424.85, Entropy: -0.09, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 64.814249, Unsimilarity Loss: 0.00
+GMM ACC: 0.3249, GMM NMI: 0.1902, GMM ARI: 0.1139
+Z_Leiden ACC: 0.2914, Z_Leiden NMI: 0.1929, Z_Leiden ARI: 0.1255
+
+Epoch [15/1000]
+LR: 0.0001, Total Loss: 1324.35, Recon Loss: 836.90, KL GMM: 424.66, Entropy: -0.14, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 62.924590, Unsimilarity Loss: 0.00
+GMM ACC: 0.3263, GMM NMI: 0.1951, GMM ARI: 0.1182
+Z_Leiden ACC: 0.2520, Z_Leiden NMI: 0.1738, Z_Leiden ARI: 0.0993
+
+Epoch [16/1000]
+LR: 0.0001, Total Loss: 1320.26, Recon Loss: 835.12, KL GMM: 424.26, Entropy: -0.19, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 61.070243, Unsimilarity Loss: 0.00
+GMM ACC: 0.3252, GMM NMI: 0.1904, GMM ARI: 0.1102
+Z_Leiden ACC: 0.3033, Z_Leiden NMI: 0.1741, Z_Leiden ARI: 0.1198
+
+Epoch [17/1000]
+LR: 0.0001, Total Loss: 1302.35, Recon Loss: 819.25, KL GMM: 423.95, Entropy: -0.24, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 59.385957, Unsimilarity Loss: 0.00
+GMM ACC: 0.3253, GMM NMI: 0.1922, GMM ARI: 0.1123
+Z_Leiden ACC: 0.2793, Z_Leiden NMI: 0.1518, Z_Leiden ARI: 0.0875
+
+Epoch [18/1000]
+LR: 0.0001, Total Loss: 1299.15, Recon Loss: 818.05, KL GMM: 423.68, Entropy: -0.28, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 57.704178, Unsimilarity Loss: 0.00
+GMM ACC: 0.3316, GMM NMI: 0.1976, GMM ARI: 0.1192
+Z_Leiden ACC: 0.2937, Z_Leiden NMI: 0.1729, Z_Leiden ARI: 0.1066
+
+Epoch [19/1000]
+LR: 0.0001, Total Loss: 1293.15, Recon Loss: 813.98, KL GMM: 423.35, Entropy: -0.32, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 56.142897, Unsimilarity Loss: 0.00
+GMM ACC: 0.3305, GMM NMI: 0.2013, GMM ARI: 0.1228
+Z_Leiden ACC: 0.3136, Z_Leiden NMI: 0.1804, Z_Leiden ARI: 0.1187
+
+Epoch [20/1000]
+LR: 0.0001, Total Loss: 1291.43, Recon Loss: 814.44, KL GMM: 422.63, Entropy: -0.36, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 54.718968, Unsimilarity Loss: 0.00
+GMM ACC: 0.3255, GMM NMI: 0.1929, GMM ARI: 0.1116
+Z_Leiden ACC: 0.2520, Z_Leiden NMI: 0.1694, Z_Leiden ARI: 0.0949
+
+Epoch [21/1000]
+LR: 0.0001, Total Loss: 1277.28, Recon Loss: 802.12, KL GMM: 422.06, Entropy: -0.40, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 53.495257, Unsimilarity Loss: 0.00
+GMM ACC: 0.3254, GMM NMI: 0.1938, GMM ARI: 0.1134
+Z_Leiden ACC: 0.2674, Z_Leiden NMI: 0.1585, Z_Leiden ARI: 0.0951
+
+Epoch [22/1000]
+LR: 0.0001, Total Loss: 1270.65, Recon Loss: 797.50, KL GMM: 421.12, Entropy: -0.43, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 52.459702, Unsimilarity Loss: 0.00
+GMM ACC: 0.3214, GMM NMI: 0.1934, GMM ARI: 0.1106
+Z_Leiden ACC: 0.2929, Z_Leiden NMI: 0.1635, Z_Leiden ARI: 0.1034
+
+Epoch [23/1000]
+LR: 0.0001, Total Loss: 1259.25, Recon Loss: 787.63, KL GMM: 420.78, Entropy: -0.47, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 51.306982, Unsimilarity Loss: 0.00
+GMM ACC: 0.3292, GMM NMI: 0.2001, GMM ARI: 0.1204
+Z_Leiden ACC: 0.3129, Z_Leiden NMI: 0.1809, Z_Leiden ARI: 0.1203
+
+Epoch [24/1000]
+LR: 0.0001, Total Loss: 1266.08, Recon Loss: 795.73, KL GMM: 420.72, Entropy: -0.50, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 50.125136, Unsimilarity Loss: 0.00
+GMM ACC: 0.3364, GMM NMI: 0.2064, GMM ARI: 0.1276
+Z_Leiden ACC: 0.2800, Z_Leiden NMI: 0.1488, Z_Leiden ARI: 0.0887
+
+Epoch [25/1000]
+LR: 0.0001, Total Loss: 1248.62, Recon Loss: 779.55, KL GMM: 420.44, Entropy: -0.53, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 49.157338, Unsimilarity Loss: 0.00
+GMM ACC: 0.3327, GMM NMI: 0.2038, GMM ARI: 0.1239
+Z_Leiden ACC: 0.3132, Z_Leiden NMI: 0.1840, Z_Leiden ARI: 0.1220
+
+Epoch [26/1000]
+LR: 0.0001, Total Loss: 1244.56, Recon Loss: 776.69, KL GMM: 420.28, Entropy: -0.56, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 48.151344, Unsimilarity Loss: 0.00
+GMM ACC: 0.3335, GMM NMI: 0.2021, GMM ARI: 0.1232
+Z_Leiden ACC: 0.2986, Z_Leiden NMI: 0.1674, Z_Leiden ARI: 0.1027
+
+Epoch [27/1000]
+LR: 0.0001, Total Loss: 1240.48, Recon Loss: 773.81, KL GMM: 420.05, Entropy: -0.59, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 47.207833, Unsimilarity Loss: 0.00成功复制配置文件到: /mnt/sda/gene/zhangym/VADER/VADER/Test_MCREC/0107_cVADER_Instrument/Two_Unsupervise
+
+Clustering method: leiden
+使用学习率调度器
+
+Epoch [1/1000]
+LR: 0.0001, Total Loss: 2792.74, Recon Loss: 2225.94, KL GMM: 482.63, Entropy: 1.65, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 82.530713, Unsimilarity Loss: 0.00
+GMM ACC: 0.2894, GMM NMI: 0.1949, GMM ARI: 0.1220
+Z_Leiden ACC: 0.2690, Z_Leiden NMI: 0.2607, Z_Leiden ARI: 0.1538
+
+Epoch [2/1000]
+
+GMM ACC: 0.3381, GMM NMI: 0.2074, GMM ARI: 0.1293
+Z_Leiden ACC: 0.3133, Z_Leiden NMI: 0.1765, Z_Leiden ARI: 0.1188
+
+Epoch [28/1000]
+LR: 0.0001, Total Loss: 1235.71, Recon Loss: 770.07, KL GMM: 419.95, Entropy: -0.61, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 46.307692, Unsimilarity Loss: 0.00
+GMM ACC: 0.3408, GMM NMI: 0.2097, GMM ARI: 0.1336
+Z_Leiden ACC: 0.3270, Z_Leiden NMI: 0.1872, Z_Leiden ARI: 0.1237
+
+Epoch [29/1000]
+LR: 0.0001, Total Loss: 1242.26, Recon Loss: 777.31, KL GMM: 420.05, Entropy: -0.64, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 45.535369, Unsimilarity Loss: 0.00
+GMM ACC: 0.3331, GMM NMI: 0.2032, GMM ARI: 0.1239
+Z_Leiden ACC: 0.3343, Z_Leiden NMI: 0.1955, Z_Leiden ARI: 0.1381
+
+Epoch [30/1000]
+LR: 0.0001, Total Loss: 1226.07, Recon Loss: 762.29, KL GMM: 419.68, Entropy: -0.66, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 44.754381, Unsimilarity Loss: 0.00
+GMM ACC: 0.3369, GMM NMI: 0.2061, GMM ARI: 0.1289
+Z_Leiden ACC: 0.2968, Z_Leiden NMI: 0.1963, Z_Leiden ARI: 0.1201
+
+Epoch [31/1000]
+LR: 0.0001, Total Loss: 1226.36, Recon Loss: 763.44, KL GMM: 419.61, Entropy: -0.69, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 44.005742, Unsimilarity Loss: 0.00
+GMM ACC: 0.3397, GMM NMI: 0.2098, GMM ARI: 0.1344
+Z_Leiden ACC: 0.3048, Z_Leiden NMI: 0.1742, Z_Leiden ARI: 0.1087
+
+Epoch [32/1000]
+LR: 0.0001, Total Loss: 1220.50, Recon Loss: 758.30, KL GMM: 419.58, Entropy: -0.71, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 43.328918, Unsimilarity Loss: 0.00
+GMM ACC: 0.3423, GMM NMI: 0.2120, GMM ARI: 0.1400
+Z_Leiden ACC: 0.3182, Z_Leiden NMI: 0.1728, Z_Leiden ARI: 0.1118
+
+Epoch [33/1000]
+LR: 0.0001, Total Loss: 1223.34, Recon Loss: 762.01, KL GMM: 419.39, Entropy: -0.73, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 42.667719, Unsimilarity Loss: 0.00
+GMM ACC: 0.3459, GMM NMI: 0.2160, GMM ARI: 0.1444
+Z_Leiden ACC: 0.3306, Z_Leiden NMI: 0.1923, Z_Leiden ARI: 0.1278
+
+Epoch [34/1000]
+LR: 0.0001, Total Loss: 1215.67, Recon Loss: 755.27, KL GMM: 419.09, Entropy: -0.75, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 42.059987, Unsimilarity Loss: 0.00
+GMM ACC: 0.3443, GMM NMI: 0.2130, GMM ARI: 0.1430
+Z_Leiden ACC: 0.3442, Z_Leiden NMI: 0.2194, Z_Leiden ARI: 0.1485
+
+Epoch [35/1000]
+LR: 0.0001, Total Loss: 1215.39, Recon Loss: 755.61, KL GMM: 419.06, Entropy: -0.77, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 41.482520, Unsimilarity Loss: 0.00
+GMM ACC: 0.3434, GMM NMI: 0.2114, GMM ARI: 0.1393
+Z_Leiden ACC: 0.2962, Z_Leiden NMI: 0.2076, Z_Leiden ARI: 0.1250
+
+Epoch [36/1000]
+LR: 0.0001, Total Loss: 1215.42, Recon Loss: 756.31, KL GMM: 419.00, Entropy: -0.78, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 40.886086, Unsimilarity Loss: 0.00
+GMM ACC: 0.3432, GMM NMI: 0.2111, GMM ARI: 0.1406
+Z_Leiden ACC: 0.3169, Z_Leiden NMI: 0.2055, Z_Leiden ARI: 0.1357
+
+Epoch [37/1000]
+LR: 0.0001, Total Loss: 1206.83, Recon Loss: 748.44, KL GMM: 418.76, Entropy: -0.80, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 40.435240, Unsimilarity Loss: 0.00
+GMM ACC: 0.3462, GMM NMI: 0.2149, GMM ARI: 0.1466
+Z_Leiden ACC: 0.3333, Z_Leiden NMI: 0.2184, Z_Leiden ARI: 0.1506
+
+Epoch [38/1000]
+LR: 0.0001, Total Loss: 1208.44, Recon Loss: 750.75, KL GMM: 418.61, Entropy: -0.82, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 39.895249, Unsimilarity Loss: 0.00
+GMM ACC: 0.3455, GMM NMI: 0.2139, GMM ARI: 0.1465
+Z_Leiden ACC: 0.3339, Z_Leiden NMI: 0.2073, Z_Leiden ARI: 0.1469
+
+Epoch [39/1000]
+LR: 0.0001, Total Loss: 1200.49, Recon Loss: 743.32, KL GMM: 418.57, Entropy: -0.83, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 39.428795, Unsimilarity Loss: 0.00
+GMM ACC: 0.3424, GMM NMI: 0.2125, GMM ARI: 0.1448
+Z_Leiden ACC: 0.2876, Z_Leiden NMI: 0.1673, Z_Leiden ARI: 0.1047
+
+Epoch [40/1000]
+LR: 0.0001, Total Loss: 1201.34, Recon Loss: 744.85, KL GMM: 418.36, Entropy: -0.84, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 38.978485, Unsimilarity Loss: 0.00
+GMM ACC: 0.3441, GMM NMI: 0.2121, GMM ARI: 0.1451
+Z_Leiden ACC: 0.3141, Z_Leiden NMI: 0.2063, Z_Leiden ARI: 0.1288
+
+Epoch [41/1000]
+LR: 0.0001, Total Loss: 1204.76, Recon Loss: 748.96, KL GMM: 418.11, Entropy: -0.86, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 38.549120, Unsimilarity Loss: 0.00
+GMM ACC: 0.3436, GMM NMI: 0.2148, GMM ARI: 0.1466
+Z_Leiden ACC: 0.3630, Z_Leiden NMI: 0.2123, Z_Leiden ARI: 0.1543
+
+Epoch [42/1000]
+LR: 0.0001, Total Loss: 1197.80, Recon Loss: 742.33, KL GMM: 418.18, Entropy: -0.87, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 38.157765, Unsimilarity Loss: 0.00
+GMM ACC: 0.3483, GMM NMI: 0.2191, GMM ARI: 0.1552
+Z_Leiden ACC: 0.2600, Z_Leiden NMI: 0.1794, Z_Leiden ARI: 0.1041
+
+Epoch [43/1000]
+LR: 0.0001, Total Loss: 1200.86, Recon Loss: 745.80, KL GMM: 418.05, Entropy: -0.88, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 37.891361, Unsimilarity Loss: 0.00
+GMM ACC: 0.3452, GMM NMI: 0.2150, GMM ARI: 0.1490
+Z_Leiden ACC: 0.3629, Z_Leiden NMI: 0.2183, Z_Leiden ARI: 0.1599
+
+Epoch [44/1000]
+LR: 0.0001, Total Loss: 1194.46, Recon Loss: 740.07, KL GMM: 417.79, Entropy: -0.89, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 37.479595, Unsimilarity Loss: 0.00
+GMM ACC: 0.3469, GMM NMI: 0.2198, GMM ARI: 0.1549
+Z_Leiden ACC: 0.3135, Z_Leiden NMI: 0.1908, Z_Leiden ARI: 0.1211
+
+Epoch [45/1000]
+LR: 0.0001, Total Loss: 1189.38, Recon Loss: 735.31, KL GMM: 417.82, Entropy: -0.89, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 37.135483, Unsimilarity Loss: 0.00
+GMM ACC: 0.3469, GMM NMI: 0.2200, GMM ARI: 0.1548
+Z_Leiden ACC: 0.3426, Z_Leiden NMI: 0.2133, Z_Leiden ARI: 0.1529
+
+Epoch [46/1000]
+LR: 0.0001, Total Loss: 1191.74, Recon Loss: 738.22, KL GMM: 417.64, Entropy: -0.90, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 36.776564, Unsimilarity Loss: 0.00
+GMM ACC: 0.3452, GMM NMI: 0.2175, GMM ARI: 0.1516
+Z_Leiden ACC: 0.3082, Z_Leiden NMI: 0.2016, Z_Leiden ARI: 0.1289
+
+Epoch [47/1000]
+LR: 0.0001, Total Loss: 1191.92, Recon Loss: 738.78, KL GMM: 417.56, Entropy: -0.91, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 36.490851, Unsimilarity Loss: 0.00
+GMM ACC: 0.3455, GMM NMI: 0.2221, GMM ARI: 0.1576
+Z_Leiden ACC: 0.2998, Z_Leiden NMI: 0.1861, Z_Leiden ARI: 0.1160
+
+Epoch [48/1000]
+LR: 0.0001, Total Loss: 1186.59, Recon Loss: 733.82, KL GMM: 417.43, Entropy: -0.92, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 36.251629, Unsimilarity Loss: 0.00
+GMM ACC: 0.3443, GMM NMI: 0.2185, GMM ARI: 0.1531
+Z_Leiden ACC: 0.3729, Z_Leiden NMI: 0.2460, Z_Leiden ARI: 0.1775
+
+Epoch [49/1000]
+LR: 0.0001, Total Loss: 1187.19, Recon Loss: 734.88, KL GMM: 417.29, Entropy: -0.92, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 35.937161, Unsimilarity Loss: 0.00
+GMM ACC: 0.3460, GMM NMI: 0.2206, GMM ARI: 0.1551
+Z_Leiden ACC: 0.3082, Z_Leiden NMI: 0.2074, Z_Leiden ARI: 0.1271
+
+Epoch [50/1000]
+LR: 0.0001, Total Loss: 1183.20, Recon Loss: 731.22, KL GMM: 417.20, Entropy: -0.92, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 35.703813, Unsimilarity Loss: 0.00
+GMM ACC: 0.3443, GMM NMI: 0.2219, GMM ARI: 0.1558
+Z_Leiden ACC: 0.3458, Z_Leiden NMI: 0.2220, Z_Leiden ARI: 0.1505
+
+Epoch [51/1000]
+LR: 0.0001, Total Loss: 1179.44, Recon Loss: 727.76, KL GMM: 417.12, Entropy: -0.93, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 35.478767, Unsimilarity Loss: 0.00
+GMM ACC: 0.3432, GMM NMI: 0.2222, GMM ARI: 0.1553
+Z_Leiden ACC: 0.3387, Z_Leiden NMI: 0.2013, Z_Leiden ARI: 0.1290
+
+Epoch [52/1000]
+
+GMM ACC: 0.3097, GMM NMI: 0.2769, GMM ARI: 0.1750
+Z_Leiden ACC: 0.4555, Z_Leiden NMI: 0.3485, Z_Leiden ARI: 0.2704
+
+Epoch [28/1000]
+LR: 0.0001, Total Loss: 1631.19, Recon Loss: 1137.54, KL GMM: 431.76, Entropy: 0.14, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 61.755219, Unsimilarity Loss: 0.00
+GMM ACC: 0.3105, GMM NMI: 0.2760, GMM ARI: 0.1749
+Z_Leiden ACC: 0.3659, Z_Leiden NMI: 0.3320, Z_Leiden ARI: 0.2174
+
+Epoch [29/1000]
+LR: 0.0001, Total Loss: 1605.30, Recon Loss: 1112.61, KL GMM: 431.14, Entropy: 0.12, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 61.435171, Unsimilarity Loss: 0.00
+GMM ACC: 0.3171, GMM NMI: 0.2807, GMM ARI: 0.1762
+Z_Leiden ACC: 0.4043, Z_Leiden NMI: 0.3088, Z_Leiden ARI: 0.2269
+
+Epoch [30/1000]
+LR: 0.0001, Total Loss: 1595.74, Recon Loss: 1104.21, KL GMM: 430.44, Entropy: 0.09, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 60.993272, Unsimilarity Loss: 0.00
+GMM ACC: 0.3146, GMM NMI: 0.2790, GMM ARI: 0.1771
+Z_Leiden ACC: 0.3919, Z_Leiden NMI: 0.3250, Z_Leiden ARI: 0.2540
+
+Epoch [31/1000]
+LR: 0.0001, Total Loss: 1602.25, Recon Loss: 1111.13, KL GMM: 430.51, Entropy: 0.08, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 60.535217, Unsimilarity Loss: 0.00
+GMM ACC: 0.3231, GMM NMI: 0.2837, GMM ARI: 0.1790
+Z_Leiden ACC: 0.4119, Z_Leiden NMI: 0.3262, Z_Leiden ARI: 0.2526
+
+Epoch [32/1000]
+LR: 0.0001, Total Loss: 1577.42, Recon Loss: 1087.05, KL GMM: 430.23, Entropy: 0.06, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 60.091921, Unsimilarity Loss: 0.00
+GMM ACC: 0.3151, GMM NMI: 0.2796, GMM ARI: 0.1750
+Z_Leiden ACC: 0.4182, Z_Leiden NMI: 0.3173, Z_Leiden ARI: 0.2496
+
+Epoch [33/1000]
+LR: 0.0001, Total Loss: 1572.00, Recon Loss: 1081.69, KL GMM: 430.63, Entropy: 0.04, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 59.644968, Unsimilarity Loss: 0.00
+GMM ACC: 0.3151, GMM NMI: 0.2806, GMM ARI: 0.1763
+Z_Leiden ACC: 0.4066, Z_Leiden NMI: 0.3109, Z_Leiden ARI: 0.2357
+
+Epoch [34/1000]
+LR: 0.0001, Total Loss: 1565.09, Recon Loss: 1075.75, KL GMM: 430.15, Entropy: 0.02, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 59.169260, Unsimilarity Loss: 0.00
+GMM ACC: 0.3143, GMM NMI: 0.2806, GMM ARI: 0.1761
+Z_Leiden ACC: 0.3885, Z_Leiden NMI: 0.3109, Z_Leiden ARI: 0.2423
+
+Epoch [35/1000]
+LR: 0.0001, Total Loss: 1573.97, Recon Loss: 1084.97, KL GMM: 430.28, Entropy: -0.00, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 58.722529, Unsimilarity Loss: 0.00
+GMM ACC: 0.3120, GMM NMI: 0.2813, GMM ARI: 0.1749
+Z_Leiden ACC: 0.3599, Z_Leiden NMI: 0.3197, Z_Leiden ARI: 0.2323
+
+Epoch [36/1000]
+LR: 0.0001, Total Loss: 1551.32, Recon Loss: 1062.77, KL GMM: 430.30, Entropy: -0.02, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 58.264301, Unsimilarity Loss: 0.00
+GMM ACC: 0.3141, GMM NMI: 0.2819, GMM ARI: 0.1760
+Z_Leiden ACC: 0.3900, Z_Leiden NMI: 0.3251, Z_Leiden ARI: 0.2462
+
+Epoch [37/1000]
+LR: 0.0001, Total Loss: 1540.65, Recon Loss: 1052.69, KL GMM: 430.24, Entropy: -0.03, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 57.758371, Unsimilarity Loss: 0.00
+GMM ACC: 0.3127, GMM NMI: 0.2831, GMM ARI: 0.1737
+Z_Leiden ACC: 0.3950, Z_Leiden NMI: 0.3224, Z_Leiden ARI: 0.2532
+
+Epoch [38/1000]
+LR: 0.0001, Total Loss: 1536.73, Recon Loss: 1049.31, KL GMM: 430.20, Entropy: -0.05, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 57.268836, Unsimilarity Loss: 0.00
+GMM ACC: 0.3112, GMM NMI: 0.2822, GMM ARI: 0.1732
+Z_Leiden ACC: 0.3944, Z_Leiden NMI: 0.3373, Z_Leiden ARI: 0.2609
+
+Epoch [39/1000]
+LR: 0.0001, Total Loss: 1534.16, Recon Loss: 1047.98, KL GMM: 429.48, Entropy: -0.07, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 56.767876, Unsimilarity Loss: 0.00
+GMM ACC: 0.3129, GMM NMI: 0.2832, GMM ARI: 0.1767
+Z_Leiden ACC: 0.4035, Z_Leiden NMI: 0.3380, Z_Leiden ARI: 0.2383
+
+Epoch [40/1000]
+LR: 0.0001, Total Loss: 1529.57, Recon Loss: 1043.64, KL GMM: 429.72, Entropy: -0.08, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 56.290553, Unsimilarity Loss: 0.00
+GMM ACC: 0.3164, GMM NMI: 0.2835, GMM ARI: 0.1764
+Z_Leiden ACC: 0.3923, Z_Leiden NMI: 0.3230, Z_Leiden ARI: 0.2374
+
+Epoch [41/1000]
+LR: 0.0001, Total Loss: 1524.26, Recon Loss: 1038.88, KL GMM: 429.68, Entropy: -0.10, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 55.796143, Unsimilarity Loss: 0.00
+GMM ACC: 0.3141, GMM NMI: 0.2810, GMM ARI: 0.1736
+Z_Leiden ACC: 0.3819, Z_Leiden NMI: 0.3317, Z_Leiden ARI: 0.2407
+
+Epoch [42/1000]
+LR: 0.0001, Total Loss: 1510.61, Recon Loss: 1025.80, KL GMM: 429.60, Entropy: -0.11, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 55.315952, Unsimilarity Loss: 0.00
+GMM ACC: 0.3137, GMM NMI: 0.2858, GMM ARI: 0.1772
+Z_Leiden ACC: 0.4320, Z_Leiden NMI: 0.3476, Z_Leiden ARI: 0.2694
+
+Epoch [43/1000]
+LR: 0.0001, Total Loss: 1508.13, Recon Loss: 1024.03, KL GMM: 429.38, Entropy: -0.13, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 54.848931, Unsimilarity Loss: 0.00
+GMM ACC: 0.3218, GMM NMI: 0.2871, GMM ARI: 0.1782
+Z_Leiden ACC: 0.3955, Z_Leiden NMI: 0.3538, Z_Leiden ARI: 0.2666
+
+Epoch [44/1000]
+LR: 0.0001, Total Loss: 1501.88, Recon Loss: 1018.09, KL GMM: 429.56, Entropy: -0.14, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 54.367037, Unsimilarity Loss: 0.00
+GMM ACC: 0.3211, GMM NMI: 0.2883, GMM ARI: 0.1794
+Z_Leiden ACC: 0.4215, Z_Leiden NMI: 0.3371, Z_Leiden ARI: 0.2565
+
+Epoch [45/1000]
+LR: 0.0001, Total Loss: 1503.45, Recon Loss: 1020.73, KL GMM: 428.96, Entropy: -0.15, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 53.912054, Unsimilarity Loss: 0.00
+GMM ACC: 0.3256, GMM NMI: 0.2906, GMM ARI: 0.1817
+Z_Leiden ACC: 0.4117, Z_Leiden NMI: 0.3508, Z_Leiden ARI: 0.2623
+
+Epoch [46/1000]
+LR: 0.0001, Total Loss: 1498.80, Recon Loss: 1016.15, KL GMM: 429.34, Entropy: -0.17, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 53.472620, Unsimilarity Loss: 0.00
+GMM ACC: 0.3164, GMM NMI: 0.2913, GMM ARI: 0.1799
+Z_Leiden ACC: 0.4086, Z_Leiden NMI: 0.3259, Z_Leiden ARI: 0.2583
+
+Epoch [47/1000]
+LR: 0.0001, Total Loss: 1482.27, Recon Loss: 1000.32, KL GMM: 429.08, Entropy: -0.18, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 53.043380, Unsimilarity Loss: 0.00
+GMM ACC: 0.3170, GMM NMI: 0.2889, GMM ARI: 0.1790
+Z_Leiden ACC: 0.4657, Z_Leiden NMI: 0.3645, Z_Leiden ARI: 0.2828
+
+Epoch [48/1000]
+LR: 0.0001, Total Loss: 1476.21, Recon Loss: 994.98, KL GMM: 428.83, Entropy: -0.19, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 52.595225, Unsimilarity Loss: 0.00
+GMM ACC: 0.3178, GMM NMI: 0.2914, GMM ARI: 0.1819
+Z_Leiden ACC: 0.3641, Z_Leiden NMI: 0.3395, Z_Leiden ARI: 0.2350
+
+Epoch [49/1000]
+LR: 0.0001, Total Loss: 1480.15, Recon Loss: 999.44, KL GMM: 428.72, Entropy: -0.21, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 52.206232, Unsimilarity Loss: 0.00
+GMM ACC: 0.3195, GMM NMI: 0.2939, GMM ARI: 0.1840
+Z_Leiden ACC: 0.4089, Z_Leiden NMI: 0.3351, Z_Leiden ARI: 0.2539
+
+Epoch [50/1000]
+LR: 0.0001, Total Loss: 1475.57, Recon Loss: 995.35, KL GMM: 428.66, Entropy: -0.22, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 51.778530, Unsimilarity Loss: 0.00
+GMM ACC: 0.3197, GMM NMI: 0.2936, GMM ARI: 0.1840
+Z_Leiden ACC: 0.3906, Z_Leiden NMI: 0.3447, Z_Leiden ARI: 0.2629
+
+Epoch [51/1000]
+LR: 0.0001, Total Loss: 1466.35, Recon Loss: 986.58, KL GMM: 428.60, Entropy: -0.22, Prior_Loss: 0.00, Weiggted Spectral: 0.00, Match Loss: 51.396117, Unsimilarity Loss: 0.00
+GMM ACC: 0.3225, GMM NMI: 0.2943, GMM ARI: 0.1852
+Z_Leiden ACC: 0.4221, Z_Leiden NMI: 0.3551, Z_Leiden ARI: 0.2735
+
+Epoch [52/1000]
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/concurrent/futures/process.py", line 243, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 96, in train_on_dataset_wrapper
+    return train_on_dataset(**args)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 81, in train_on_dataset
+    model = train_manager(
+  File "/mnt/sda/gene/zhangym/VADER/VADER/train.py", line 149, in train_manager
+    recon_x, z_mean, z_log_var, z, S = model(tensor_gpu_data)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/vade_new.py", line 377, in forward
+    z_mean, z_log_var, S= self.encoder(x)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/vade_new.py", line 65, in forward
+    x = self.net(x)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 101, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/functional.py", line 1473, in relu
+    result = torch.relu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 190.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 175.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Process 753841 has 1.80 GiB memory in use. Process 753844 has 1.10 GiB memory in use. Including non-PyTorch memory, this process has 1.88 GiB memory in use. Of the allocated memory 1.01 GiB is allocated by PyTorch, and 429.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 346, in <module>
+    main()
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 341, in main
+    all_models = asyncio.run(run_all_datasets_async(datasets))
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 112, in run_all_datasets_async
+    result = await f
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/asyncio/tasks.py", line 609, in _wait_for_one
+    return f.result()  # May raise f.exception().
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 190.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 175.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Process 753841 has 1.80 GiB memory in use. Process 753844 has 1.10 GiB memory in use. Including non-PyTorch memory, this process has 1.88 GiB memory in use. Of the allocated memory 1.01 GiB is allocated by PyTorch, and 429.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Future exception was never retrieved
+future: <Future finished exception=OutOfMemoryError('CUDA out of memory. Tried to allocate 56.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 41.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Process 753841 has 1.94 GiB memory in use. Including non-PyTorch memory, this process has 1.10 GiB memory in use. Process 753896 has 1.88 GiB memory in use. Of the allocated memory 573.97 MiB is allocated by PyTorch, and 82.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')>
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/concurrent/futures/process.py", line 243, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 96, in train_on_dataset_wrapper
+    return train_on_dataset(**args)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 81, in train_on_dataset
+    model = train_manager(
+  File "/mnt/sda/gene/zhangym/VADER/VADER/train.py", line 163, in train_manager
+    recon_x, z_mean, z_log_var, z, S = model(tensor_gpu_data)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/vade_new.py", line 377, in forward
+    z_mean, z_log_var, S= self.encoder(x)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/vade_new.py", line 65, in forward
+    x = self.net(x)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 101, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/functional.py", line 1473, in relu
+    result = torch.relu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 41.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Process 753841 has 1.94 GiB memory in use. Including non-PyTorch memory, this process has 1.10 GiB memory in use. Process 753896 has 1.88 GiB memory in use. Of the allocated memory 573.97 MiB is allocated by PyTorch, and 82.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"""
+
+The above exception was the direct cause of the following exception:
+
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 41.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Process 753841 has 1.94 GiB memory in use. Including non-PyTorch memory, this process has 1.10 GiB memory in use. Process 753896 has 1.88 GiB memory in use. Of the allocated memory 573.97 MiB is allocated by PyTorch, and 82.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Future exception was never retrieved
+future: <Future finished exception=OutOfMemoryError('CUDA out of memory. Tried to allocate 136.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 43.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Including non-PyTorch memory, this process has 1.93 GiB memory in use. Process 753844 has 1.10 GiB memory in use. Process 753896 has 1.88 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 351.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')>
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/concurrent/futures/process.py", line 243, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 96, in train_on_dataset_wrapper
+    return train_on_dataset(**args)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/run_all_datasets.py", line 81, in train_on_dataset
+    model = train_manager(
+  File "/mnt/sda/gene/zhangym/VADER/VADER/train.py", line 163, in train_manager
+    recon_x, z_mean, z_log_var, z, S = model(tensor_gpu_data)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/vade_new.py", line 377, in forward
+    z_mean, z_log_var, S= self.encoder(x)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/sda/gene/zhangym/VADER/VADER/vade_new.py", line 65, in forward
+    x = self.net(x)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/gene/zhangym/.conda/envs/ID_PY390/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 136.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 43.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Including non-PyTorch memory, this process has 1.93 GiB memory in use. Process 753844 has 1.10 GiB memory in use. Process 753896 has 1.88 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 351.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+"""
+
+The above exception was the direct cause of the following exception:
+
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 136.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 43.69 MiB is free. Process 2020141 has 2.91 GiB memory in use. Process 2074542 has 15.62 GiB memory in use. Including non-PyTorch memory, this process has 1.93 GiB memory in use. Process 753844 has 1.10 GiB memory in use. Process 753896 has 1.88 GiB memory in use. Of the allocated memory 1.14 GiB is allocated by PyTorch, and 351.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
