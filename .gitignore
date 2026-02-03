@@ -11,6 +11,7 @@ model_config.yaml
 **/*.out
 *.pk
 **/*.log
+**/*.ipynb
 lorentzian_peaks_random_colors.png
 tensor_baseline_plot.png
 tensor_line_plot.png

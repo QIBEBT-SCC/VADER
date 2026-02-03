@@ -88,7 +88,7 @@ def train_on_dataset(
     )
 
     # torch.save(model.state_dict(), f'/mnt/sda/gene/zhangym/VADER/Augmentation/Gene_spectra/Generated_Spectra/{memo}_VADER_{epochs}.pk')
-    torch.save(model.state_dict(), os.path.join(project_tag,memo, f'{memo}_model_dict_cVADER_{epochs}.pk'))
+    torch.save(model.state_dict(), os.path.join(project_tag,memo, f'{memo}_model_dict_VADER_{epochs}.pk'))
 
     print(f"[{project_tag}] 训练完成。\n")
 
@@ -114,7 +114,7 @@ async def run_all_datasets_async(datasets):
     return results
 
 def main():
-    project_tag = 'Test_MCREC/0107_cVADER_Instrument'
+    project_tag = 'Test_MCREC/0128_VADER_Batch'
     
     datasets = [
         # {
@@ -239,42 +239,42 @@ def main():
         #     'batch_size':   128,
         #     "memo": "Probiotics"
         # },
+        # {
+        #     "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_1/data_1_X.npy"),
+        #     "train_label": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_1/data_1_Y.npy").astype(int), 
+        #     "S": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_1/data_1_S_10.npy"),
+        #     "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_3/data_3_wave.npy'),
+        #     "device": "cuda:2",
+        #     "project_tag": project_tag,
+        #     'Pretrain_epochs': 100,
+        #     'epochs':   1000,
+        #     'batch_size':   128,
+        #     "memo": "Dataset_1_Unsupervise_100:1"
+        # },
         {
-            "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/X_Horiba.npy"),
-            "train_label": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Y_Horiba.npy").astype(int), 
-            "S": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/MCR_HORIBA_20_component.npy"),
-            "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Wavenumber.npy'),
-            "device": "cuda:1",
+            "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_2/data_2_X.npy"),
+            "train_label": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_2/data_2_Y.npy").astype(int), 
+            "S": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_2/data_2_S_10.npy"),
+            "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_3/data_3_wave.npy'),
+            "device": "cuda:2",
             "project_tag": project_tag,
             'Pretrain_epochs': 100,
             'epochs':   1000,
             'batch_size':   128,
-            "memo": "Horiba_Unsupervise"
+            "memo": "Dataset_2_Unsupervise"
         },
-        {
-            "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/X_WITEC.npy"),
-            "train_label": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Y_WITEC.npy").astype(int), 
-            "S": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/MCR_WITEC_20_component.npy"),
-            "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Wavenumber.npy'),
-            "device": "cuda:1",
-            "project_tag": project_tag,
-            'Pretrain_epochs': 100,
-            'epochs':   1000,
-            'batch_size':   128,
-            "memo": "WITEC_Unsupervise"
-        },
-        {
-            "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/X_Two.npy"),
-            "train_label": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Y_Two.npy").astype(int), 
-            "S": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/MCR_Two_20_component.npy"),
-            "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/NC_JiabaoXu/Wavenumber.npy'),
-            "device": "cuda:1",
-            "project_tag": project_tag,
-            'Pretrain_epochs': 100,
-            'epochs':   1000,
-            'batch_size':   128,
-            "memo": "Two_Unsupervise"
-        },
+        # {
+        #     "train_data":  np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_3/data_3_X.npy"),
+        #     "train_label": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_3/data_3_Y.npy").astype(int), 
+        #     "S": np.load(r"/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_3/data_3_S_10.npy"),
+        #     "Wavenumber": np.load(r'/mnt/sda/gene/zhangym/VADER/Data/Self_made_batch_effect/Dataset_3/data_3_wave.npy'),
+        #     "device": "cuda:2",
+        #     "project_tag": project_tag,
+        #     'Pretrain_epochs': 100,
+        #     'epochs':   1000,
+        #     'batch_size':   128,
+        #     "memo": "Dataset_3_Unsupervise_100:1"
+        # },
         ## ATCC Datasets
         # {
         #     'train_data': np.load(r"/mnt/sda/gene/zhangym/VADER/Data/ATCC_7/Noise_0.01s.npy"),  
